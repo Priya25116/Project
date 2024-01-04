@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Home from './Pages/Home'
+import Order from './Pages/Order'
+import NoPage from './Pages/NoPage'
+import Cart from './Pages/Cart'
+import Dashboard from './Pages/Admin/Dashboard'
+import myContext from './context/myContext'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const App = () => 
+{
+  const state = {
+    name : "Hari",
+    Phno: 3333
+ }
+  
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <myContext .Provider value={state}>
+      <BrowserRouter>
+          <Routes>
+            <Route  path='/' element= {<Home />}/>
+            <Route path='/order' element ={< Order/>} />
+            <Route  path='/cart' element ={<Cart />} />
+            <Route  path='/dashboard' element ={<Dashboard />} />
+            <Route  path='/*' element ={<NoPage />} />
+            <Route />
+         </Routes>
+      </BrowserRouter>
+    </myContext .Provider>
+    
   )
 }
 
