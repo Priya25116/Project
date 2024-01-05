@@ -6,13 +6,12 @@ import myContext from '../context/myContext'
 const Home = () => 
 {
   const data = useContext(myContext)
-  console.log(data)
+  //console.log(data)
   return (
     <div>
       <Layout>
         <p>Home</p>
       </Layout>
-     
     </div>
   )
 }
