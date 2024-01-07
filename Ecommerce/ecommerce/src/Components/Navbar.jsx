@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FaSearch } from "react-icons/fa"
 import {Link} from 'react-router-dom'
 import { TiShoppingCart } from "react-icons/ti"
+import logo from '../assets/logo.png'
 
 
 const Navbar = () => 
@@ -19,16 +20,20 @@ const Navbar = () =>
         }
     }
   return (
-    <div>
-      <div className="image">
-        <img />
+    <div className='flex justify-between items-center bg-black text-white '>
+      <div className="image ">
+        <img 
+            src={logo}
+            alt='image'
+            className='h h-10 w-50'
+        />
       </div>
-      <div>
+      <div className='search flex justify-between items-center bg-black text-white'>
         <input type='' name='' id=''/>
         <FaSearch />
       </div>
       <div className='menu'>
-        <ul>
+        <ul className='flex justify-between items-center gap-5 bg-black text-white'>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -40,7 +45,7 @@ const Navbar = () =>
           </li>
         </ul>
       </div>
-      <div className="h-button">
+      <div className='h-button flex justify-center bg-black text-white'>
           <TiShoppingCart />
           <button>Login</button>
       </div>
