@@ -7,6 +7,7 @@ import Cart from './Pages/Cart'
 import Dashboard from './Pages/Admin/Dashboard'
 import myContext from './context/myContext'
 import Allproducts from './Pages/Allproducts'
+import Contact from './Pages/Contact'
 
 
 const App = () => 
@@ -23,6 +24,7 @@ const App = () =>
             <Route  path='/' element= {<Home />}/>
             <Route path='/order' element ={< Order/>} />
             <Route  path='/products' element={< Allproducts/>}/>
+            <Route  path='/contact' element={< Contact/>}/>
             <Route  path='/cart' element ={<Cart />} />
             <Route  path='/dashboard' element ={<Dashboard />} />
             <Route  path='/*' element ={<NoPage />} />
