@@ -16,6 +16,7 @@ const Allproducts = () =>
 
   return (
     <Layout>
+      <p>Products</p>
       <div className='grid grid-cols-3 p-20'>
         { products && 
            products.map((prod, index) => (

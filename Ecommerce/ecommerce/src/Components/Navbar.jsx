@@ -20,7 +20,7 @@ const Navbar = () =>
         }
     }
   return (
-    <div className='flex justify-between items-center bg-black text-white '>
+    <div className='flex justify-between items-center bg-black text-white px-10 py-3'>
       <div className="image ">
         <img 
             src={logo}
