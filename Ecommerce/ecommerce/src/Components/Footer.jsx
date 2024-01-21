@@ -2,9 +2,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
-      
-      <p>Footer</p>
+    <div className=' bg-black w-100 text-white'>
+      <p className=' text-center'>Shopping &copy; cpoyrighted 2023</p>
     </div>
   )
 }
