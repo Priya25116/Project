@@ -20,7 +20,7 @@ const Navbar = () =>
         }
     }
   return (
-    <div className='flex justify-between items-center bg-black text-white px-10 py-3'>
+    <div className='flex justify-between items-center gap-5 bg-black text-white px-10 py-3'>
       <div className="image ">
         <img 
             src={logo}
@@ -28,8 +28,8 @@ const Navbar = () =>
             className='h h-10 w-50'
         />
       </div>
-      <div className='search flex justify-between items-center bg-black text-white'>
-        <input type='' name='' id=''/>
+      <div className='search flex justify-between items-center bg-white text-black'>
+        <input type="text" name='' id=''/>
         <FaSearch />
       </div>
       <div className='menu'>
@@ -45,7 +45,7 @@ const Navbar = () =>
           </li>
         </ul>
       </div>
-      <div className='h-button flex justify-center bg-black text-white'>
+      <div className='h-button  flex justify-center gap-5 bg-black text-white' >
           <TiShoppingCart />
           <button>Login</button>
       </div>
